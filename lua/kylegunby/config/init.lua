@@ -1,0 +1,5 @@
+--  Must happen before plugins are loaded (otherwise wrong leader will be used)
+require("kylegunby.config.options")
+require("kylegunby.config.keymap")
+require("kylegunby.config.lazy")
+require("kylegunby.config.autocmd")
