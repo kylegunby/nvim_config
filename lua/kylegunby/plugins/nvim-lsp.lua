@@ -167,7 +167,25 @@ return { -- LSP Configuration & Plugins
 			-- But for many setups, the LSP (`tsserver`) will work just fine
 			-- tsserver = {},
 			--
-
+			pyright = {
+				settings = {
+					pyright = {
+						disableOrganizeImports = true,
+					},
+					python = {
+						analysis = {
+							ignore = { "*" },
+						},
+					}
+				}
+			},
+			ruff_lsp = {
+				on_attach = function(client, bufnr)
+					if client.name == 'ruff-lsp' then
+						client.server_capabilities.hoverProvider = false
+					end
+				end,
+			},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},

@@ -1,13 +1,24 @@
+--vim.cmd("set expandtab")
+--vim.cmd("set tabstop=2")
+----vim.cmd("set softtabstop=2")
+--vim.cmd("set shiftwidth=2")
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+
+vim.wo.number = true
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.opt.number = true
 -- Add relative line numbers, to help with jumping.
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"

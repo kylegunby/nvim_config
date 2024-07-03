@@ -1,5 +1,3 @@
---  See `:help lua-guide-autocommands`
-
 -- NeoTree Auto Open
 vim.api.nvim_create_autocmd("VimEnter", {
 	pattern = "*",
